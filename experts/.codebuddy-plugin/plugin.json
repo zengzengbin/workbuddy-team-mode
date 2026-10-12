@@ -1,0 +1,88 @@
+{
+  "name": "workbuddy-team-mode",
+  "expertType": "team",
+  "version": "1.0.0",
+  "description": "Multi-agent team mode: a lead orchestrates explorer, executor, reviewer and expert advisor roles to locate, implement and review code work.",
+  "author": {
+    "name": "workbuddy-team-mode contributors",
+    "email": "noreply@github.com"
+  },
+  "agents": [
+    "./agents/workbuddy-team-mode-team-lead.md",
+    "./agents/team-explorer.md",
+    "./agents/team-executor.md",
+    "./agents/team-reviewer.md",
+    "./agents/team-expert-advisor.md"
+  ],
+  "agentName": "workbuddy-team-mode-team-lead",
+  "teamInfo": {
+    "leadAgent": "workbuddy-team-mode-team-lead",
+    "memberAgents": ["team-explorer", "team-executor", "team-reviewer", "team-expert-advisor"]
+  },
+  "displayName": {
+    "en": "Team Mode",
+    "zh": "小队模式"
+  },
+  "profession": {
+    "en": "Multi-Agent Orchestration",
+    "zh": "多智能体协作编排"
+  },
+  "displayDescription": {
+    "en": "A lead agent splits work across explorer, executor, reviewer and expert advisor roles.",
+    "zh": "主理人拆解任务、派发探索、执行、评审与专家顾问四个角色，协作完成定位、实现与评审"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "productivity",
+  "defaultInitPrompt": {
+    "en": "Enable team mode and split my task across the four roles.",
+    "zh": "开启小队模式，帮我拆分并完成当前任务"
+  },
+  "plugin": "workbuddy-team-mode",
+  "tags": [
+    { "en": "Multi-Agent", "zh": "多智能体协作" },
+    { "en": "Code Review", "zh": "代码评审" },
+    { "en": "Task Automation", "zh": "任务自动化" }
+  ],
+  "quickPrompts": [
+    { "en": "Enable team mode and split my task across the four roles.", "zh": "开启小队模式，帮我拆分并完成当前任务" },
+    { "en": "Check team mode status", "zh": "查看小队状态" },
+    { "en": "Exit team mode", "zh": "退出小队模式" }
+  ],
+  "members": [
+    {
+      "id": "workbuddy-team-mode-team-lead",
+      "name": { "en": "Team Lead", "zh": "主理人" },
+      "profession": { "en": "Orchestrator", "zh": "主理人" },
+      "avatar": "avatars/team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "team-explorer",
+      "name": { "en": "Explorer", "zh": "探索" },
+      "profession": { "en": "Code Explorer", "zh": "代码探索员" },
+      "avatar": "avatars/team-explorer.png",
+      "role": "member"
+    },
+    {
+      "id": "team-executor",
+      "name": { "en": "Executor", "zh": "执行" },
+      "profession": { "en": "Task Executor", "zh": "任务执行员" },
+      "avatar": "avatars/team-executor.png",
+      "role": "member"
+    },
+    {
+      "id": "team-reviewer",
+      "name": { "en": "Reviewer", "zh": "评审" },
+      "profession": { "en": "Quality Reviewer", "zh": "质量评审员" },
+      "avatar": "avatars/team-reviewer.png",
+      "role": "member"
+    },
+    {
+      "id": "team-expert-advisor",
+      "name": { "en": "Expert Advisor", "zh": "专家顾问" },
+      "profession": { "en": "Expert Advisor", "zh": "专家顾问" },
+      "avatar": "avatars/team-expert-advisor.png",
+      "role": "member"
+    }
+  ]
+}
